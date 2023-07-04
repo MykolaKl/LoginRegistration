@@ -1,6 +1,5 @@
 package com.testtask.demo.entity;
 
-import com.testtask.demo.entity.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
