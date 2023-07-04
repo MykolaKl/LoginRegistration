@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 
 
+
 @Controller
 public class AuthController {
 
@@ -101,14 +102,9 @@ public class AuthController {
             model.addAttribute("user", userDto);
             return "edit";
         }
-        existingUser.setFirstName(userDto.getFirstName());
-        existingUser.setLastName(userDto.getLastName());
-        existingUser.setEmail(userDto.getEmail());
-        existingUser.setPassword(userDto.getPassword());
 
-
-        userService.saveUser(UserDto.fromUser(existingUser));
-        System.out.println("Edited");
+        userService.updateUser(existingUser.getId(), userDto);
+        System.out.println("Edited!");
         return "redirect:/profile?success";
     }
 

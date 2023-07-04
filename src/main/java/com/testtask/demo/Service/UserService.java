@@ -10,9 +10,11 @@ import java.util.Optional;
 public interface UserService {
     void saveUser(UserDto userDto);
 
-    void updateUser(UserDto userDto);
+    void updateUser(Long id, UserDto userDto);
 
     User findByEmail(String email);
+
+    Optional<User> findById (Long id);
 
     List<UserDto> findAllUsers();
 }

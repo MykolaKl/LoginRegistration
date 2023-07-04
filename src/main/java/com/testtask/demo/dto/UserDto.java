@@ -14,6 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UserDto
 {
+
     private Long id;
     @NotEmpty(message = "This field can not be empty")
     private String firstName;
